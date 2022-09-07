@@ -32,7 +32,7 @@ app.post('/api/set', express.json(), function (req, res, next) {
         });
 });
 
-const port = 3000;
+const port = process.env.PORT || 3000;
 app.listen(port, () => {
     console.log(`server started at port ${port}`);
 });
